@@ -89,14 +89,14 @@ builder.Services.AddAuthentication(options =>
     options.Cookie.SameSite = SameSiteMode.None;
     options.Cookie.SecurePolicy = CookieSecurePolicy.SameAsRequest;
 });
-builder.Services.AddCors(options =>
-    {
-        options.AddPolicy("AllowFrontend", policy =>
-            policy.WithOrigins("https://appserviceplandotnet-dae6dbgaarf3fte6.chilecentral-01.azurewebsites.net","http://localhost:5059") // Add YOUR Swagger/Frontend URLs
-                  .AllowAnyHeader()
-                  .AllowAnyMethod()
-                  .AllowCredentials());
-    });
+//builder.Services.AddCors(options =>
+//  {
+//        options.AddPolicy("AllowFrontend", policy =>
+//          policy.WithOrigins("http://localhost:7117","http://localhost:5059") // Add YOUR Swagger/Frontend URLs
+//                .AllowAnyHeader()
+//                .AllowAnyMethod()
+//                .AllowCredentials());
+//  });
 
     builder.Services.AddAuthorization(options =>
     {
